@@ -1,0 +1,241 @@
+/* Общие настройки */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f3e8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header .logo {
+    font-size: 32px;      
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4px;  
+    color: #f5f3e8;      
+}
+
+/* Шапка */
+header {
+    background-color: #3b3a30;
+    color: #f5f3e8;
+    padding: 30px 0;
+}
+.header-quote {
+    font-size: 13px;          /* мельче */
+    font-style: italic;
+    color: #e2dfd6;           /* мягкий светлый оттенок */
+    text-align: right;        /* выравнивание по правому краю */
+    line-height: 1.2;         /* строки ближе друг к другу */
+    margin-top: 2px;          /* минимальный отступ */
+    opacity: 0.85;            /* лёгкая прозрачность */
+}
+
+.header-quote span {
+    display: block;          
+}
+
+.header-quote .quote-author {
+    margin-top: 3px;
+    font-size: 12px;
+    font-style: normal;
+    color: #d6d2c7;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f5f3e8;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #6b5b3e;
+}
+
+/* Основной контент */
+main {
+    padding: 30px 0;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: #3b3a30;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6b5b3e;
+    color: #f5f3e8;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #8c7a55;
+}
+
+/* Карточки книг */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    width: calc(33.333% - 20px);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Таблица чтения */
+.reading-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.reading-table th,
+.reading-table td {
+    border: 1px solid #ccc;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.reading-table th {
+    background-color: #e0d7c6;
+}
+
+/* Форма */
+form {
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+}
+
+form textarea {
+    min-height: 100px;
+}
+
+form button {
+    border: none;
+    cursor: pointer;
+}
+
+/* Галерея */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: calc(25% - 15px);
+    border-radius: 6px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Подвал */
+footer {
+    background-color: #3b3a30;
+    color: #f5f3e8;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+footer .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .gallery img {
+        width: calc(50% - 15px);
+    }
+}
